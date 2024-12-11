@@ -13,11 +13,11 @@ jobs:
 
     steps:
       - name: Pull Docker image
-        run: sudo docker pull sulubay/myawstest
+        run: sudo docker pull sulubay/mytestaws
 
       - name: Delete all Docker containers
-        run: sudo docker rm -f myawstest-container || true
+        run: sudo docker rm -f mytestaws-container || true
 
       - name: Run Docker container
-        run: sudo docker run -d -p 8080:5000 --name myawstest-container sulubay/myawstest
+        run: sudo docker run -d -p 8080:5000 --name mytestaws-container sulubay/mytestaws
 
