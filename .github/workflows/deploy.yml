@@ -3,7 +3,7 @@ name: CI Pipline
 on:
   push:
     branches:
-      - main  # Пайплайн срабатывает при пуше в ветку main
+      - main  # Пайплайн срабатывает при пуше в ветку mai
   workflow_dispatch:  # Позволяет запускать пайплайн вручную
 
 jobs:
