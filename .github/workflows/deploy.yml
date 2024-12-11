@@ -22,7 +22,7 @@ jobs:
         run: docker build -t your-dockerhub-sulubay/mytestaws:latest .
 
       - name: Push Docker image to Docker Hub
-        run: docker push sulubay/mytestaws:tagname
+        run: docker push sulubay/mytestaws:latest
 
   deploy:
     needs: build
