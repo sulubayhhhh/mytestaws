@@ -1,22 +1,22 @@
-name: Cd pipline
+name: Cd pipeline
 
 on:
   workflow_run:
-    workflows: ["CI Pipline"]
+    workflows: ["CI Pipeline"]
     types:
       - completed
-jobs:
 
+jobs:
   build:
     runs-on: self-hosted
 
     steps:
-  
       - name: Pull Docker image
-        run:  docker pull sulubay/myawstest
-        
-      - name: Delete all docker cont
-        run: docker rm -f myawstest || true
-      
-      - name: Docker run connt
+        run: sudo docker pull sulubay/myawstest
+
+      - name: Delete all Docker containers
+        run: sudo docker rm -f myawstest-container || true
+
+      - name: Run Docker container
         run: sudo docker run -d -p 8080:5000 --name myawstest-container sulubay/myawstest
+
